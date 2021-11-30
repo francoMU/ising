@@ -83,7 +83,7 @@ int main(int argc, char *argv[]) {
   stop = std::chrono::high_resolution_clock::now();
 
   duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-  std::cout << "Time for MC moves: " << duration.count() << " mircoseconds" << std::endl;
+  std::cout << "Time for MC moves: " << duration.count() << " microseconds" << std::endl;
 
   std::cout << "Accepted: " << accepted << std::endl;
   std::cout << "New: " << newed << std::endl;
