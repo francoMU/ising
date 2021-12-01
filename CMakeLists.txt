@@ -9,6 +9,7 @@ add_executable(ising)
 target_sources(ising PUBLIC
         main.cpp
         ising.cpp
-        ising.hpp)
+        ising.hpp
+        settings.hpp)
 
 target_include_directories(ising PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

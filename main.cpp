@@ -3,18 +3,28 @@
 #include <chrono>
 #include <cstdlib>
 #include <iostream>
-#include "ising.hpp"
 
+#include "ising.hpp"
+#include "settings.hpp"
 
 int main(int argc, char *argv[]) {
 
-  constexpr auto steps = 100000000;
 
-  constexpr long long int N = 100;
-  constexpr auto size = N * N;
-  constexpr double temperature = 0.01;
+  const ising::Config cfg =
+      {
+          {"steps",       "100000000"},
+          {"N",           "100"},
+          {"temperature", "0.001"},
+          {"J",           "1.0"}
+      };
 
-  constexpr auto J = 1.0;
+
+  auto steps = cfg.get<long long int>("steps");
+  auto N = cfg.get<long long int>("N");
+  auto temperature = cfg.get<double>("temperature");
+  auto J = cfg.get<double>("J");
+
+  auto size = N * N;
 
   // allocate memory
   int *ising_matrix = new int[size];

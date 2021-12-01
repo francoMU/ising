@@ -9,6 +9,6 @@ void create_random_matrix(int *ising_matrix, long long int n);
 
 void print_summary(int *ising_matrix, long long int n);
 
-int get_energy_diff(const int *ising_matrix, int row, int col, int n);
+int get_energy_diff(const int *ising_matrix, int row, int col, long long int n);
 
 #endif //ISING_ISING_HPP
